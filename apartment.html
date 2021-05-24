@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Author: Ibrahim Elamin, 000790302 -->
+		<title>Sandie & Leslie Apartment</title>
+	</head>
+	<style>
+	
+	body {
+				font-family: sans-serif;
+				font-size: 15px;
+			
+			}
+	nav ul  {
+		display: inline;
+		marin-right: none;
+		padding-left: 15px;
+	}
+	@media only screen and (max-width: 700px) {
+			#survey {
+				display: block;
+				
+			}
+			#header img {
+				display: none;
+			}
+			
+			nav ul {
+				display: block;
+			}
+			
+			#gridtbl {
+				grid-row: 3;
+				grid-column: 1;
+			}
+			
+			#location {
+				grid-row: 4;
+				grid-column: 1;
+			}
+			
+			#container {
+				display: block;
+				grid-template-columns: auto;
+			}
+			
+			
+	
+	}
+	
+	h1 {
+				color: midnightblue;
+			}
+	h2 {
+				color: midnightblue;
+				background-color: skyblue;
+				font-weight: bold;
+				padding: 5px;
+			}
+	h3 {
+				color: white;
+				background-color: grey;
+				padding: 5px;
+			}
+			
+	.height {
+				padding-bottom: 15px;
+			}
+	.formtext {
+				padding-bottom: 5px;
+			}
+	
+	table {
+				border-collapse: collapse;
+			}
+	td, th {
+				border: 1px solid black;
+			}
+	th {
+				background-color: darkgrey;
+			}
+	.yellow {
+				background-color: #fafad2;
+			}
+	
+	#container {
+				display: grid;
+				grid-template-columns: auto auto auto;
+				grid-gap: 10px;
+				
+			}
+	
+	#header {
+				text-align: center;
+				grid-row: 1;
+				grid-column: 1 / span 3;
+				
+			}
+	#footer {
+				text-align: center;
+				grid-row: 4;
+				grid-column:1 /span 3;
+			}
+			
+	#survey {
+				
+				grid-column: 1;
+				grid-row: 2;
+				
+				
+			}
+	#gridtbl {
+				
+				grid-column: 2;
+				grid-row: 2;
+			}
+			
+	#location {
+				
+			grid-column: 3;
+			grid-row: 2;
+			}
+	
+	.galleryflex {	
+				
+				margin: 15px;
+				padding: 5px;
+			}
+		
+	#flexcontainer {
+		display: flex;
+		flex-wrap: wrap;
+	}
+			
+	#gallery {
+				
+			grid-row: 3;
+			grid-column: 1/ span 3;
+			}
+	.font {
+		font-weight: bold;
+	}
+	
+	
+	
+	</style>
+	
+	<body>
+	
+	
+		<script>
+			var myvariable = "This is a";
+			var myvariable2 = "sentence";
+			var sentence = myvariable + myvariable2;
+			document.write()
+		</script>
+		<div id = "container">
+			<div id = "header">	
+				<h1> Sandie and Leslies's Apartment</h1>
+				
+				<p> Click a room for a detailed view. </p>
+				
+				<img src = "images/floorplan.jpg" alt = "floorplan" usemap = "#floorplan">
+				<map name = "floorplan">
+					<area shape = "default" href = "apartment.html" alt = "apartment">
+					<area shape = "polygon" coords = "251,146,271,195,201,124,33,121,20,247" href = "livingroom.html" alt = "Living Room" title = 
+					"Living Room">
+					<area shape = "rect" coords = "97,28,228,112" href = "kitchen.html" alt = "kitchen" title = 
+					"Kitchen">
+					<area shape = "rect" coords = "387,21,555,134" href = "bedroom.html" alt = "bedroom" title = 
+					"Bedroom">
+					<area shape = "circle" coords = "313,75, 60" href = "bathroom.html" alt = "bathroom" title = 
+					"Bathroom">
+					<area shape = "rect" coords = "391,141,565,247" href = "#office" alt = "office" title = 
+					"Detail view is not available">
+				</map>
+				<nav>
+					<ul><a href = "apartment.html">Apartment</a></ul>
+					<ul><a href = "bedroom.html">Bedroom</a></ul>
+					<ul><a href = "bathroom.html">Bathroom</a></ul>
+					<ul><a href = "kitchen.html">Kitchen</a></ul>
+					<ul><a href = "livingroom.html">Living Room</a></ul>
+					<ul><a href = "#office">Office</a></ul>
+				</nav>
+			</div>
+		<div id = "survey">
+			
+				<h2>Survey</h2>
+		
+				<p class = "formtext">How did you find out about this apartment? Check any that apply:</p>
+			
+				<input type = "checkbox" name = "websearch" id = "websearch">
+				<label for = "websearch"> Web Search </label>
+				
+				<input type = "checkbox" name = "friend" id = "friend">
+				<label for = "friend"> Friend</label>
+				
+				<input type = "checkbox" name = "newspaper" id = "newspaper">
+				<label for = "newspaper"> News Paper</label><br>
+				
+				<input type = "submit" value = "Submit" class = "font">
+				<input type = "reset" value = "Reset Form" class = "font">
+
+
+				<h2>Welcome Message</h2>
+				<audio controls> 
+					<source src = "media/apartment.mp3" type = "audio/mpeg">
+					
+				</audio>
+					<p>Transcript: Hello. Welcome to our apartment. You'll really enjoy living here. The <br>
+					rooms are spacious and the apartment building amenities are fantastic. We look<br> forward to hearing from you!</p>
+
+		</div>
+			
+			<div id = "gridtbl">
+				<h2> Apartment Services</h2>
+				<table border = "1">
+					<tr>
+						<th>Service</th>
+						<th>Day/Hours</th>
+					</tr>
+					
+					<tr>
+						<td>Gym</td>
+						<td rowspan = "2">Monday-Friday 6am - 10pm<br>
+						Saturday 8am - 8pm<br>
+						Sunday 8am - 5pm</td>
+					
+					</tr>
+					
+					<tr>
+						
+						<td>Pool</td>
+						
+					</tr>
+					
+					<tr>
+						<td>Laundry</td>
+						<td>24/7</td>
+					</tr>
+					
+					<tr>
+						<td colspan = "2" class ="yellow">Please do not allow people you do not know to use these facilities</td>
+					</tr>
+				</table>
+
+			</div>
+				
+				<div id = "location">
+					<h2>Location</h2>
+					<img src = "images/location.png" alt = "location" width = "450">
+				</div>
+			
+		
+				<div id = "gallery">
+					<h2>Gallery</h2>
+					<div id = "flexcontainer">
+						
+						
+						<div class = "galleryflex">
+							<h3>Balcony</h3>
+							<img src = "images/balcony.jpg" alt = "balcony" width = "240" height = "240" >
+					
+						</div>
+						
+						<div class = "galleryflex">
+							<h3>Bathroom</h3>
+							<img src = "images/bathroom_lg.jpg" alt = "bathroom" width = "240" height = "240">
+						</div>
+						
+						<div class = "galleryflex">
+							<h3>Bedroom</h3>
+							<img src = "images/bedroom_lg.jpg" alt = "bedroom" width = "240" height = "240">
+						</div>
+						
+						<div class = "galleryflex">
+							<h3>Dining Room</h3>
+							<img src = "images/diningroom_lg.jpg" alt = "diningroom" width = "240" height = "240">
+						</div>
+						
+						<div class = "galleryflex">
+							<h3>Kitchen</h3>
+							<img src = "images/kitchen_lg.jpg" alt = "kitchen" width = "240" height = "240">
+						</div>
+						
+						<div class = "galleryflex">
+							<h3>Living Room</h3>
+							<img src = "images/livingroom_lg.jpg" alt = "livingroom" width = "240" height = "240">
+						</div>
+					</div>
+				</div>
+			</div>
+		<div id ="footer">	
+		<footer> For more information contact: <a href = "mailto:SandyAndLeslie@example.com"> SandyAndLeslie@example.com </a><br>
+		&copy Sandy and Leslie 2019
+		</div>
+		
+	</body>
+</html>
